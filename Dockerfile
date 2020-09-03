@@ -11,6 +11,6 @@ FROM nginx
 EXPOSE 80
 
 # Copy from previous phase
-COPY --from=builder /app/build /usr/share/nginx/html
+COPY --from=0 /app/build /usr/share/nginx/html
 
 # Default command from nginx base image starts nginx
